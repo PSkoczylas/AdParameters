@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Xml::Services::ConverterToEuro do
+describe Placements::Services::ConverterToEuro do
   subject { described_class.new(currency:, value:).call }
 
   context 'from Euro' do

@@ -23,7 +23,7 @@ module Xml
       CREATIVE_SEARCH = '//Creative'
       def create_creatives(data)
         data.xpath(CREATIVE_SEARCH).each do |attr|
-          creatives.append(Dto::Creative.new)
+          creatives.append(Creative.new)
           attr.each do |creative|
             creatives.last.send("#{creative[0].to_sym}=", creative[1])
           end
@@ -33,7 +33,7 @@ module Xml
       PLACEMENT_SEARCH = '//Placement'
       def create_placements(data)
         data.xpath(PLACEMENT_SEARCH).each do |attr|
-          placements.append(Dto::Placement.new)
+          placements.append(Placement.new)
           attr.each do |placement|
             placements.last.send("#{placement[0].to_sym}=", placement[1])
           end

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Xml
+module Placements
   module Services
     class ConverterToEuro
       attr_reader :currency, :value
