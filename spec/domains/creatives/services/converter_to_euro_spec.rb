@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-describe Placements::Services::ConverterToEuro do
+describe Creatives::Services::ConverterToEuro do
   subject { described_class.new(currency:, value:).call }
 
   context 'from Euro' do
@@ -16,8 +18,8 @@ describe Placements::Services::ConverterToEuro do
     let(:currency) { 'USD' }
     let(:value) { 5.11 }
 
-    it 'returns the same value' do
-      expect(subject).to eq(5.7743)
+    it 'returns converted value' do
+      expect(subject).to eq(5.77)
     end
   end
 
@@ -25,8 +27,8 @@ describe Placements::Services::ConverterToEuro do
     let(:currency) { 'SEK' }
     let(:value) { 5.11 }
 
-    it 'returns the same value' do
-      expect(subject).to eq(56.8743)
+    it 'returns converted value' do
+      expect(subject).to eq(56.87)
     end
   end
 
@@ -34,8 +36,8 @@ describe Placements::Services::ConverterToEuro do
     let(:currency) { 'TYR' }
     let(:value) { 5.11 }
 
-    it 'returns the same value' do
-      expect(subject).to eq(16.9141)
+    it 'returns converted value' do
+      expect(subject).to eq(16.91)
     end
   end
 end

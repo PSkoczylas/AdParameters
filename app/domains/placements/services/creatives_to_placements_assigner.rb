@@ -15,9 +15,10 @@ module Placements
           creatives.each do |creative|
             break unless creative.price >= placement.floor
 
-            placement.creatives.append(placement)
+            placement.creatives.append(creative)
           end
         end
+        placements
       end
     end
   end

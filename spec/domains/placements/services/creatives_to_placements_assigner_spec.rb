@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 describe Placements::Services::CreativesToPlacementsAssigner do
-  subject { described_class.new(creatives: , placements: ).call }
+  subject { described_class.new(creatives:, placements:).call }
 
   context 'for 4 creatives to 5 placements' do
     let(:creative1) { Creative.new(id: 'Video1', price: 3.21, currency: 'EUR') }

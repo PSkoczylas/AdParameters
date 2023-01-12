@@ -3,19 +3,19 @@
 module Xml
   module Services
     class Reader
-      attr_reader :io, :creatives, :placements
+      attr_reader :xml_data, :creatives, :placements
 
-      def initialize(io:)
-        @io = io
+      def initialize(xml_data:)
+        @xml_data = xml_data
         @creatives = []
         @placements = []
       end
 
       def call
-        # data = Nokogiri::XML(File.open("../files/#{file_name}"))
-        data = Nokogiri::XML(io)
-        create_creatives(data)
-        create_placements(data)
+        output_data = Nokogiri::XML(xml_data)
+        create_creatives(output_data)
+        create_placements(output_data)
+        { creatives:, placements: }
       end
 
       private

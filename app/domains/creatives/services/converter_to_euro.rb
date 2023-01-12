@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Placements
+module Creatives
   module Services
     class ConverterToEuro
       attr_reader :currency, :value
@@ -18,7 +18,7 @@ module Placements
       end
 
       def call
-        (value * EXCHANGE[currency.to_sym]).round(4)
+        (value * EXCHANGE[currency.to_sym]).round(2)
       end
     end
   end

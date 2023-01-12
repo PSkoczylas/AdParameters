@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Application is mostly done with tests, but I can't call to any of protobus message and I can't resolve this problem.
 
-Things you may want to cover:
+To run application just start bundle exec rails s and then you can call it to localhost:3000/to_proto with xml as body.
 
-* Ruby version
+Unfortunetely it doesn't finish correctly, because to anyone message call doesn't work (Rails don't see class).
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+I tried resolve it for many hours, but I couldn't find any way to repair it.
