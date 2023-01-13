@@ -1,0 +1,7 @@
+syntax = "proto2";
+import "creative_message.proto";
+package proto;
+
+message CreativeSeq {
+  repeated CreativeMessage creatives = 1;
+};

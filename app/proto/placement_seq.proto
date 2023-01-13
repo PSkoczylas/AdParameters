@@ -1,0 +1,7 @@
+syntax = "proto2";
+import "placement_message.proto";
+package proto;
+
+message PlacementSeq {
+  repeated PlacementMessage placement = 1;
+};

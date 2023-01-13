@@ -1,0 +1,8 @@
+syntax = "proto2";
+import "creative_message.proto";
+package proto;
+
+message PlacementMessage {
+  required string id = 1;
+  repeated CreativeMessage creatives = 2;
+};

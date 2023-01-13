@@ -5,4 +5,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  post 'to_proto', to: 'placement_seq#to_proto'
 end
